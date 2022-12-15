@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Car Dealership</title>
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+      crossorigin="anonymous">
+  </head>
+  <body>
+    @using Dealership.Models;
+    @using System.Collections.Generic;
+
+    <h1>Car Dealership</h1>
+    @if (Car._instances != null)
+    {
+      foreach (KeyValuePair<string, int[]> keyValue in Car._instances)
+      {
+        <h5>keyValue[Car.MakeModel]</h5>
+      }
+
+    }
+
+    <a href="/car/new">Add a new car</a>
+  </body>
+</html>
